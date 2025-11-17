@@ -20,5 +20,11 @@ def split_at_first_digit(formula):
         return formula, 1
 
     prefix = formula[:digit_location]
-    num = int(formula[digit_location])
+
+    j = digit_location
+    while j < len(formula) and formula[j].isdigit():
+        j += 1
+
+    num = int(formula[digit_location:j])
+
     return prefix, num
