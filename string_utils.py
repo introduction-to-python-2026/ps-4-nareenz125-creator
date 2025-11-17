@@ -6,7 +6,7 @@ def split_at_first_digit(formula):
     digit_location = -1
 
     for i in range(len(formula)):
-        if formula[i].isdigit:
+        if formula[i].isdigit():
             digit_location = i
             break
     if digit_location == -1:
